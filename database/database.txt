@@ -1,0 +1,52 @@
+-- Database: covid_db
+-- DROP DATABASE covid_db;
+CREATE DATABASE covid_db
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+-- Table: public.covid_cases
+-- DROP TABLE public.covid_cases;
+CREATE TABLE public.covid_cases
+(
+    county_id character varying(5) COLLATE pg_catalog."default",
+    state character varying(50) COLLATE pg_catalog."default",
+    county_name character varying(100) COLLATE pg_catalog."default",
+    occurence_date date,
+    confirmed bigint,
+    deaths bigint,
+    recovered bigint,
+    id bigint NOT NULL DEFAULT nextval('"Master_Dataset_P_Key_seq"'::regclass),
+    CONSTRAINT "Master1_Dataset_pkey" PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+ALTER TABLE public.covid_cases
+    OWNER to postgres;
+	
+-- Table: public.state_county_info
+
+-- DROP TABLE public.state_county_info;
+
+CREATE TABLE public.state_county_info
+(
+    state character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    county_id character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    county_name character varying(100) COLLATE pg_catalog."default",
+    icu_beds bigint,
+    population bigint,
+    CONSTRAINT state_pkey PRIMARY KEY (state, county_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.state_county_info
+    OWNER to postgres;
