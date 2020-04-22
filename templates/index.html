@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ICU beds capacity</title>
+    <title>ICU Beds Capacity</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- Leaflet CSS & JS -->
@@ -32,50 +32,57 @@
     <div class="container">
         
       <!-- The div where we will inject our map -->    
-        <div class="row">
-            <div class="col-md-12" style="text-align: center">
-                <h3>Population and ICU beds map</h3>
-                <div id="map"></div>
-                <div class onclick="myFunction()"></div>
-                <div class="info"></div>
-                <div id="range-slider-1"></div>
-                <div class="leaflet-top leaflet-right"></div>
-                <div class="info leaflet-control"></div>
-            </div>
+      <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="text-left" class="display-4">Visualizing Covid19</h1>
+                  <!-- <small class="text-muted">A Project Two Production</small> -->
+                  <p class="text-left" class="display-4" class="font-weight-light" class="lead">The ability of States to respond effectively to Covid19 is dependent, in part, on the number of ICU beds per population.</p>
+                </div>
+              </div>
+            <h3 class="text-left" class="display-2">Population and ICU Beds</h3>
+            <!-- <h3>
+                A map of the US
+                <small class="text-muted">Covid19 Risks</small>
+              </h3> -->
+            <div id="map"></div>
+            <div class onclick="myFunction()"></div>
+            <div class="info"></div>
+            <div id="range-slider-1"></div>
+            <div class="leaflet-top leaflet-right"></div>
+            <div class="info leaflet-control"></div>
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Line Gragh</h3>
-                <div id="lineGraph"></div>
-                
-                <br>
-            </div>
-
-            <div class="col-md-6">
-                <h3>Pie Chart</h3>
-                <div id="Piechart"></div>
-                
-                <br>
-                
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-left">Line Graph</h3>
+            <div id="lineGraph"></div>
+            
+            <br>
         </div>
-    </div><!--end of container Div-->
+        <div class="col-md-6">
+            <h3 class="text-left">Pie Chart</h3>
+            <div id="Piechart"></div>
+            
+            <br>
+            
+        </div>
+    </div>
+</div><!--end of container Div-->
 
       <!-- API key -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script type="text/javascript" src="../static/js/config.js"></script>
   <!-- JS -->
   <script type="text/javascript" src="../static/js/logic.js"></script>
-
-
-
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
     <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
 
     <!-- Footer Section -->
-<footer>
-    <div class="footer">Copyright &copy; xxxxxx</div>
-</footer>
+    <footer>
+        <div class="footer">Copyright 2020, Ash Patel, Stacey Ruelle, Onome Hunt, Mercy Auma, Sonal Khare, and Bernt Stenberg</div>
+    </footer>
 </body>
 
 </html>

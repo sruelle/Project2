@@ -76,19 +76,19 @@ def datastate():
     data_list = []
     for row in results:
         data_dict={
-        "state":row.state,
+        "NAME":row.state,
         "county_count":row.county_count,
         "Population": str(row.population),
         "beds":str(row.beds)
         }
         data_list.append(data_dict)
         
-    
-
-    # close session
+      # close session
     session.close()
 
     return jsonify(data_list)
+
+ 
 
     # return redirect("/")
 
