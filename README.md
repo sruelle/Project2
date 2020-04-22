@@ -1,1 +1,2 @@
 # group-project2
+# this project is a visualization dashboard of recents events due to the COVID-19 Panademic. We looked at ICU bed availablity accross the nation as compared to the reported cases in Jan, Feb and March of 2020. 
